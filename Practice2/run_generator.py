@@ -2,9 +2,9 @@
 from generator import Generator
 
 gen = Generator()
-
-# Генеруємо одного студента
 student = gen.generate_single()
+print(student)
+print(student.get_info())
 
-print(student)         # вызов repr
-print(student.get_info())  # вызов get_info
+students_1000 = gen.generate_1000()
+print(len(students_1000))
