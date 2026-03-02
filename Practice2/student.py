@@ -14,8 +14,9 @@ class Student:
         self.exam = exam
 
     def get_info(self) -> str:
-        """Метод для вывода краткой информации о студенте"""
+        """Метод для вывода краткой информации"""
         return f"Student({self.name}, {self.surname}, {self.discipline}, {self.exam}, {self.mark})"
 
-    def repr(self):
+    def repr(self) -> str:
         return f"Student({self.name}, {self.surname}, {self.discipline}, {self.exam}, {self.mark})"
+
