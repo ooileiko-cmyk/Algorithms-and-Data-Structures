@@ -90,3 +90,22 @@ class LinkedList:
                         i += 1
 
                     raise ValueError("Value not found")
+
+    def remove(self, value):
+        current = self.head
+        prev = None
+
+        while current:
+            if current.data == value:
+                if prev:
+                    prev.next = current.next
+                else:
+                    self.head = current.next
+
+                self._size -= 1
+                return
+
+            prev = current
+            current = current.next
+
+        raise ValueError("Value not found")
