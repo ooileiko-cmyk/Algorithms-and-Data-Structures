@@ -36,3 +36,13 @@ class LinkedList:
             current.next = new_node
 
         self._size += 1
+
+        def getitem(self, index):
+            if index < 0 or index >= self._size:
+                raise IndexError("Index out of range")
+
+            current = self.head
+            for _ in range(index):
+                current = current.next
+
+            return current.data
