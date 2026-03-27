@@ -109,3 +109,14 @@ class LinkedList:
             current = current.next
 
         raise ValueError("Value not found")
+
+    def contains(self, value):
+        current = self.head
+        while current:
+            if current.data == value:
+                return True
+            current = current.next
+        return False
+
+    if value in self:
+        return
