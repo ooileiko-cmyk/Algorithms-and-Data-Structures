@@ -75,3 +75,18 @@ class LinkedList:
                     current.next = new_node
 
                 self._size += 1
+
+                def index(self, value, start=0, stop=None):
+                    if stop is None:
+                        stop = self._size
+
+                    current = self.head
+                    i = 0
+
+                    while current:
+                        if start <= i < stop and current.data == value:
+                            return i
+                        current = current.next
+                        i += 1
+
+                    raise ValueError("Value not found")
